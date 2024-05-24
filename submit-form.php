@@ -1,20 +1,44 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $anliegen = $_POST["anliegen"];
-    $name = $_POST["name"];
-    $nachname = $_POST["nachname"];
-    $telefonnummer = $_POST["telefonnummer"];
-    $email = $_POST["email"];
+    $anliegen = htmlspecialchars($_POST['anliegen']);
+    $anrede = htmlspecialchars($_POST['anrede']);
+    $name = htmlspecialchars($_POST['name']);
+    $nachname = htmlspecialchars($_POST['nachname']);
+    $telefonnummer = htmlspecialchars($_POST['telefonnummer']);
+    $email = htmlspecialchars($_POST['email']);
 
-    $to = "kontakt@nadhemsouissi.de"; // Replace this with your actual email address
-    $subject = "New Form Submission";
-    $message = "Anliegen: $anliegen\n";
-    $message .= "Name: $name\n";
-    $message .= "Nachname: $nachname\n";
-    $message .= "Telefonnummer: $telefonnummer\n";
-    $message .= "Email: $email\n";
+    $to = "kontakt@nadhemsouissi.de";
+    $subject = "New Contact Form Submission";
+    $message = "
+    <html>
+    <head>
+        <title>New Contact Form Submission</title>
+    </head>
+    <body>
+        <p><strong>Anliegen:</strong> $anliegen</p>
+        <p><strong>Anrede:</strong> $anrede</p>
+        <p><strong>Name:</strong> $name</p>
+        <p><strong>Nachname:</strong> $nachname</p>
+        <p><strong>Telefonnummer:</strong> $telefonnummer</p>
+        <p><strong>Email:</strong> $email</p>
+    </body>
+    </html>
+    ";
 
-    mail($to, $subject, $message);
-    header("Location: index.html"); // Redirect to thank you page
+    // To send HTML mail, the Content-type header must be set
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    // Additional headers
+    $headers .= "From: <$email>" . "\r\n";
+
+    // Send the email
+    if (mail($to, $subject, $message, $headers)) {
+        // Redirect to thank you page
+        header("Location: thank_you.html");
+        exit;
+    } else {
+        echo "There was an error sending the email.";
+    }
 }
 ?>
