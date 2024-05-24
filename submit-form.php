@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Send the email
     if (mail($to, $subject, $message, $headers)) {
         // Redirect to thank you page
-        header("Location: thank_you.html");
+        header("Location: danke.html");
         exit;
     } else {
         echo "There was an error sending the email.";
