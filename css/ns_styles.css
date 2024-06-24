@@ -278,7 +278,7 @@ header{
 	height: 0;
 	z-index: 2;
 	background: rgba(255,255,255,0.1);
-	backdrop-filter: blur(15px); 
+	backdrop-filter: blur(50px); 
 	border-radius: 10px;
 	overflow: hidden;
 }
