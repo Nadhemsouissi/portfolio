@@ -756,87 +756,48 @@ h4{
 /* ***************************************** Kontakt*/
 
 .container-form {
-  	width: 66%;
+    width: 66%;
     position: relative;
     margin: 35px auto 0 auto;
-    padding: 30px 20px 30px 20px;
+    padding: 25px 20px 25px 20px;
     box-sizing: border-box;
     border-radius: 15px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    background-color:  rgba(81,81,96,0.49); /* Set background color to transparent */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    background-color: rgba(81, 81, 96, 0.49);
+    display: flex;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
 }
 
-/* Adjustments for the Anliegen input field */
-#anliegen {
-	width: 100%;
-    
+.contact-item-container {
+    display: grid;
+    grid-template-columns: 50px auto; /* 50px for icons, auto for text */
+    gap: 10px 10px; /* Space between items */
+    align-items: center;
+    justify-items: start;
 }
 
-/* Position Name and Nachname fields horizontally */
-#name, #nachname {
-     width: calc(100% -20px);
+.contact-item {
+    display: contents; /* Allows direct child elements to participate in grid layout */
+}
 
+.icon {
+    width: 40px;
+    height: 40px;
+}
 
-}
-.nn{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 10px;
-}
-.form-check-label{
-	font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1600 - 320)));
-	font-weight: 400;
-	padding-top: 10px;
-}
-label {
-    width: 100%;
-    margin-bottom: 5px;
-    font-weight: 500;
+.contact-item a {
     color: #ECECEC;
-	font-size:calc(14px + (15 - 14) * ((100vw - 320px) / (1600 - 320)));
+	font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1600 - 320)))!important;
+	font-weight: 400;
+    text-decoration: none;
+    align-self: center;
 }
 
-input[type=text], select, textarea {
-	width: 100%; 
-	padding: 15px; 
-	border: 1px solid #1D1D1D;
-	border-radius: 5px; 
-	box-sizing: border-box;
-	margin-top: 5px; 
-	margin-bottom: 15px; 
-	resize: vertical;
-	}
-
-input[type=submit] {
-	background-color: #E45A15;
-	color: #ECECEC;
-	font-size: 16px;
-	font-weight: 600;
-	width: auto ;
-	padding: 10px 50px;
-	border: none;
-	border-radius: 50px;
-	cursor: pointer;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	transition: transform 0.3s ease;
+.contact-item a:hover {
+    text-decoration: underline;
 }
 
-input[type=submit]:hover {
-  background-color: #D14500;
-	transform: scale(1.1);
-}
-
-
-.formular {
-  border-radius: 5px;
-
-  padding: 20px;
-}
-
-.form-check-label a{
-	color: #24a1d9;
-	font-weight: 500;
-}
 
 /* ***************************************** Kontakt ENDE*/
 
@@ -934,6 +895,7 @@ footer {
 /* Viewport < 576px */
 @media (max-width: 575px) {
    .dropdown_menu {
+	   backdrop-filter: blur(50px); 
    }
 	
    .footer-nav li {
@@ -957,7 +919,7 @@ footer {
 /* Viewport < 576px */
 @media (max-width: 576px) {
    .dropdown_menu {
-      
+      backdrop-filter: blur(50px); 
    }
 
 
@@ -965,7 +927,7 @@ footer {
 /* Viewport < 707px */
 @media (max-width: 707px) {
    .dropdown_menu {
-      
+     backdrop-filter: blur(50px);  
    }
 	.container {
 	grid-template-columns: 1fr !important;
@@ -1008,6 +970,7 @@ footer {
 
    .dropdown_menu {
       display: block;
+	  backdrop-filter: blur(50px); 
    }
 
    .radio-group-block {
@@ -1048,6 +1011,7 @@ footer {
    }
    .dropdown_menu {
       display: block;
+	  backdrop-filter: blur(50px); 
    }
 	#faq-container {
     display: block;
