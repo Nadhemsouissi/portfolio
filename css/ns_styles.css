@@ -498,6 +498,24 @@ nav a:hover {
     transform: scale(1.07);
 }
 
+/* Active state styles */
+nav a.active {
+	color: #EC824E;
+   
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
 .fsection {
     overflow: hidden; /* Clearfix */
 }
