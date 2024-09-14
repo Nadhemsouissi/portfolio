@@ -679,6 +679,7 @@ h4{
 		}
 		.skillbox  h3{
 			font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1600 - 320)));
+			font-weight:500;
 			text-transform: uppercase;
 			color: #ECECEC;
 		}
