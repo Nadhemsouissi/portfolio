@@ -390,7 +390,14 @@
 			</div>
 		</footer>
 
-	
+		<script>
+		document.querySelectorAll('.flip-card').forEach(card => {
+			card.addEventListener('click', () => {
+				card.classList.toggle('flipped');
+			});
+		});
+
+  		</script>
 		<script src="js/ns_nav_dropdown.js"></script>
 		<script src="js/folio_nav.js"></script>
 
