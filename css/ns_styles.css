@@ -687,7 +687,7 @@ h4{
 			float: right;
 			position: relative;
 			top: -40px;
-			font-weight: bold;
+			font-weight:500;
 			color: #ECECEC;
 		}
 		.cover{
