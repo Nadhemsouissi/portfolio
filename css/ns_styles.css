@@ -377,45 +377,87 @@ main {
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  ABOUT */
 
 .container {
-	margin: 35px 30px 0 30px;
-	max-width: 100%;
+    margin: 35px 30px 0 30px;
+    max-width: 100%;
     display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	text-align: center;
-	gap:20px;
-	
-}
-
-.section {
+    grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    background-color: rgba(81,81,96,0.49); /* Light background color */
-	min-width: 250px;
-	border-radius: 15px;
-    padding: 20px;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: background-color 0.4s, color 0.4s, transform 0.4s; /* Add transition for smooth effect */
+    gap: 20px;
 }
 
-h3{
-	font-family:'Montserrat', sans-serif;
-	font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1600 - 320))); 
+.flip-container {
+    perspective: 1000px; /* Allows for 3D flip effect */
+}
+
+.flip-card {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s; /* Smooth transition for flip */
+}
+
+.flip-card.flipped {
+    transform: rotateY(180deg); /* Rotate when flipped */
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.flip-front {
+    background-color: rgba(81, 81, 96, 0.49);
+    color: #ECECEC;
+    display: flex;
+    flex-direction: column;
+}
+
+.flip-front img {
+    width: 80px;
+    margin-bottom: 10px;
+    transition: transform 0.4s;
+}
+
+.flip-front h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1600 - 320)));
+    font-weight: 500;
+    color: #ECECEC;
+}
+
+.flip-back {
+    background-color: rgba(81, 81, 96, 0.49);
+    color: #ECECEC;
+    transform: rotateY(180deg); /* Set back side rotation */
+}
+
+.flip-back p {
+    padding: 10px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.flip-back a {
+    color: #EC824E;
+}
+
+.flip-back a:hover {
+    color: #E78F62;
 	font-weight: 500;
-	color: #ECECEC;
-}
-
-.section img {
-    width: 90px; /* Adjust the size of the icons */
 }
 
 .section:hover {
-    background-color: rgba(157,157,177,0.46); /* Change background color on hover */
-    transform: scale(1.05); /* Scale the section on hover */
+    background-color: rgba(157, 157, 177, 0.46); /* Change background color on hover */
 }
-
-.section:hover img {
-    transform: scale(1.05); /* Scale the image on hover */
-}
-
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  PORTFOLIO */
 
