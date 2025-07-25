@@ -196,7 +196,7 @@ header{
 }
 
 .links li:not(:last-child) a:hover {
-	color: #24a1d9 ;
+	color: 608abf ;
 	text-decoration: none; 
 	font-size: 1.3rem;
   	transform: scale(1.1);
@@ -298,7 +298,7 @@ header{
 }
 
 .dropdown_menu li:not(:last-child) a:hover {
-	color: #24a1d9;
+	color: #608abf;
 	background-color: rgba(166,200,228,0.10);
 	transform: scale(1.1);
 }
@@ -337,15 +337,16 @@ header{
     font-size: calc(20px + (26 - 18) * ((100vw - 320px) / (1600 - 320)))!important;
 	font-weight: 600;
     background-color: transparent;
-    color: #E45A15;
-    border: 3px solid #E45A15;
+    color: #608abf;
+    border: 3px solid #608abf;
     border-radius: 50px;
     cursor: pointer;
 	transition: transform 0.4s ease;
 }
 
 .contact-button:hover {
-    background-color: #E45A15;
+    background-color: #608abf;
+	border: 3px solid #608abf;
 	transform: scale(1.1);
 	color: #ECECEC;
 }
@@ -447,11 +448,11 @@ main {
 }
 
 .flip-back a {
-    color: #EC824E;
+    color: #608abf;
 }
 
 .flip-back a:hover {
-    color: #E78F62;
+    color: #608abf;
 	font-weight: 500;
 }
 
@@ -500,7 +501,7 @@ nav a:hover {
 
 /* Active state styles */
 nav a.active {
-	color: #EC824E;
+	color: #608abf;
    
     animation: bounce 0.5s infinite alternate;
 }
@@ -699,7 +700,7 @@ h4{
 		}
 		.cover .progressbar{
 			height: 6px;
-			background-color:#E45A15 ;
+			background-color:#608abf ;
 			margin-left: 2px;
 			margin-top: 2px;
 			border-radius: 2px;
@@ -874,12 +875,12 @@ h4{
 }
 
 .datenschutzz h3{
- color: #24a1d9;
+ color: #608abf;
 	margin: 20px 0 10px 0;
 }
 
 .datenschutzz a{
- color: #93D8F6;
+ color: #925657;
 }
 
 /* ***************************************** Datenschutz ENDE*/
@@ -942,11 +943,11 @@ footer {
 }
 
 .impressum-section a:hover {
-	color: #24a1d9 ;
+	color: #608abf ;
 }
 
 .datenschutz-section a:hover {
-	color: #24a1d9 ;
+	color: #608abf ;
 }
 
 
