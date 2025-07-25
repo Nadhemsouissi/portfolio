@@ -196,7 +196,7 @@ header{
 }
 
 .links li:not(:last-child) a:hover {
-	color: 608abf ;
+	color: #608abf ;
 	text-decoration: none; 
 	font-size: 1.3rem;
   	transform: scale(1.1);
